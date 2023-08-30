@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=devive-width,initial scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Coffee Shop</title>
+<style>
+    body
+    {
+        background-image: url("pexels-jason-villanueva-851555.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:100% 100%;
+
+    }
+  .button{
+  border: none;
+  background-color:rgb(232, 112, 0);
+  color: rgb(255, 255, 255);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  }
+  .button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #ff9100;
+}
+
+.button1:hover {
+  background-color: #ff9500;
+  color: white;
+}
+
+  
+.heading
+{
+    color:rgb(255, 255, 255);
+    text-align:left;
+    text-decoration:none;
+    font-size:20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.final
+{
+background-color:rgb(91, 91, 91);
+border-radius:150px;
+border:none;
+color:whitesmoke;
+padding:15px 32px;
+text-align: center;
+text-decoration:none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+-webkit-transition-duration: 0.4s;
+transition-duration: 0.4s;
+}
+
+
+
+</style>
+<body>
+  
+<div>
+        <h1
+          style="color:rgba(242, 242, 242, 0.799); text-align: center; font-size: 300%;">
+          DIELES COFFEE
+        </h1>
+      </div>
+      <marquee style="color:rgb(0, 0, 0);font-size:20px;font-family:verdana;">
+        <b>Discount of 5% on orders above 5 and 20% on orders above 10</i></b>
+      </marquee>
+      <h2 class="heading">What would you like to order?</h2>
+     
+      <button class="button button1" id="eight" onclick="function1(this.id)">EIGHT O'CLOCK COFFEE</button> 
+      <button class="button button1" id="kona" onclick="function1(this.id)">KONA JOE COFFEE</button> 
+      <button class="button button1" id="birch" onclick="function1(this.id)">BIRCH</button> 
+      <button class="button button1" id="marley" onclick="function1(this.id)">MARLEY</button> 
+      <button class="button button1" id="ritual" onclick="function1(this.id)">RITUAL</button> 
+      <h2 class="heading">How many orders would you like to place?</h2>
+      <label for="quantity"></label>
+      <input type="number" id="quantity" stlye="font-size=250%" min="1"><br><br>
+    <button class="final" type="button"  onclick="myFunction()">Calculate Total</button><br>
+    
+    <p id="demo1"></p>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            z=document.getElementById("quantity");
+            var z = document.getElementById("quantity").value;
+            document.getElementById("demo1").style.color="black";
+            
+            document.getElementById("demo1").style.fontSize="x-large";
+            document.getElementById("demo1").style.fontWeight="1000";
+          document.getElementById("demo1").innerHTML="Original price= " + " $ " + z*10;
+          var z = document.getElementById("quantity").value;
+          if (z >= 5 && z <= 10)
+           {
+            var y = z * 10 - z;
+            document.getElementById("demo").style.color="black";
+            document.getElementById("demo").style.fontSize="x-large";
+            document.getElementById("demo").style.fontWeight="1000";
+            
+            document.getElementById("demo").innerHTML="Discounted Price= " + " $ " + y;
+          } 
+          else if (z > 10)
+           {
+            var a = z * 10 - 2 * z;
+            document.getElementById("demo").style.color="black";
+            document.getElementById("demo").style.fontSize="x-large";
+            document.getElementById("demo").style.fontWeight="1000";
+            
+            
+            document.getElementById("demo").innerHTML="Discounted Price= " + " $ " + a;
+          }
+           else if (z < 5)
+            {
+            var b = z * 10;
+            document.getElementById("demo").style.color="black";
+            document.getElementById("demo").style.fontSize="x-large";
+            
+            document.getElementById("demo").style.fontWeight="1000";
+
+            document.getElementById("demo").innerHTML="Discounted Price= " + " $ " + b;
+          }
+        }
+        function function1(id){
+          console.log(id)
+          
+          document.getElementById(id).style.backgroundColor="#ff9500"
+          multiple:off;
+          
+          
+        }
+      </script>
+     
+      
+</body>
+</html>
